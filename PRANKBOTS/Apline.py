@@ -491,10 +491,11 @@ class LINE:
 
       prof = self.getProfile()
 
-      print("═════════[PRANKBOTS CREATOR]════════")
-      print("════════[ACIL/RIDWAN ADIPUTRA]═══════")
-      print("JANGAN LUPA SUBCRABE CHANNENYA YA SOBAT")
+      print("═════════[BOSSBOTS CREATOR]════════")
+      print("════════[Justin Nixon Plummer]═══════")
+      print("I FUCKING LOVE TACOS")
       print("MIDNA: " + prof.mid)
       print("NGARANA: " + prof.displayName)
       print("TOKETNA:  " + self.authToken)
       #print("cert : " + self.cert if self.cert is not None else "")
+
