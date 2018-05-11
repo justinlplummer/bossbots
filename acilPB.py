@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import PRANKBOTS
-from PRANKBOTS.lib.curve.ttypes import *	
+from PRANKBOTS.lib.ttypes import *	
 from datetime import datetime	
 import io,os,re,ast,six,sys,glob,json,time,timeit,codecs,random,shutil,urllib,urllib2,urllib3,goslate,html5lib,requests,threading,wikipedia,subprocess,googletrans
 from gtts import gTTS	
@@ -18,27 +18,27 @@ else:
     import urllib.request
     import urllib.parse
 acil = PRANKBOTS.LINE()
-acil.login(token="ErYWjY9YV79Z38JKxKo3.Zyqdf0szEvhn7GgnUvgUOW.UjX05iErsgigbASwAmC2c+XpFJ6lR5Tz3fa/+/Zf6bk=")
+acil.login(token="EsiXrRlmLRIeieXFeJV4.QkiFdj1LFPRPD813dWQFHa.e7vcqhQH+ef7m+m9uWJFbxeiATxZs3yEYjMv6jKWI6E=")
 acil.loginResult()
 ki = PRANKBOTS.LINE()
-ki.login(token="EriNWY115rLz2hdl48v6.AtUxbv5bm36lwyvJZPmvLG.oLcFDSxUslenk2Rz2XQg1E/dUM90SsPowtl3mIsCh+w=")
+ki.login(token="EsiXrRlmLRIeieXFeJV4.QkiFdj1LFPRPD813dWQFHa.e7vcqhQH+ef7m+m9uWJFbxeiATxZs3yEYjMv6jKWI6E=")
 ki.loginResult()
 ki2= PRANKBOTS.LINE()
-ki2.login(token="ErnJswlRxEo8wSuOebF3.MH2J3w8lfsAoWo4z8qxeuW.pmKfHC0OdXbZY5pUV/Ruyu1NohldbTi/nfmPsBzMvds=")
+ki2.login(token="EsiXrRlmLRIeieXFeJV4.QkiFdj1LFPRPD813dWQFHa.e7vcqhQH+ef7m+m9uWJFbxeiATxZs3yEYjMv6jKWI6E=")
 ki2.loginResult()
 ki3 = PRANKBOTS.LINE()
-ki3.login(token="ErkFmsynownacQGE3XDf.pMI0m8HrhHEeXjG/H6SepW.yLA1mS6JHgxa7qZzjVQ5JbbB3UFJPR0b4nxCbMc6qLY=")
+ki3.login(token="EsiXrRlmLRIeieXFeJV4.QkiFdj1LFPRPD813dWQFHa.e7vcqhQH+ef7m+m9uWJFbxeiATxZs3yEYjMv6jKWI6E=")
 ki3.loginResult()
 ki4 = PRANKBOTS.LINE()
-ki4.login(token="Er8h61l1jTFFUVf3e13a.NSj60VJy3+WTBIuVnvXHwG.wkwr4TT7v1FWJv4KfHc/Q2yDXxx7deHxXvq65XHjCJg=")
+ki4.login(token="EsiXrRlmLRIeieXFeJV4.QkiFdj1LFPRPD813dWQFHa.e7vcqhQH+ef7m+m9uWJFbxeiATxZs3yEYjMv6jKWI6E=")
 ki4.loginResult()
 ki5 = PRANKBOTS.LINE()
-ki5.login(token="ErzbXhPnCAsXlc6MA7i3.duo4C3Drdvi2rzJhZXuAaW.mkuqhMhfYByBeUBHcwNeGwpTRoaBxBFv5pSbT/yqcMo=")
+ki5.login(token="EsiXrRlmLRIeieXFeJV4.QkiFdj1LFPRPD813dWQFHa.e7vcqhQH+ef7m+m9uWJFbxeiATxZs3yEYjMv6jKWI6E=")
 print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
-helpMessage="""(╣••℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́••╣)
-╔═B༘̈́̈́L༘̈́̈́Ä༘́̈́C༘̈́̈́K༘̈́̈́   ̈́Ö༘́̈́F༘̈́̈́ ̈́  G༘̈́̈́Ä༘́̈́M༘̈́̈́Ë༘́̈́R༘̈́̈́═╗
+helpMessage="""(╣••̰̰̈́B̰̈́Ö̰̰́S̰̰̈́S̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́••╣)
+╔═T༘̈́̈́Ä༘́̈́C༘̈́̈́Ö༘́̈́    L༘̈́̈́Ö༘́̈́V༘̈́̈́Ë༘́̈́R༘̈́̈́═╗
 ║1║ ✰ Me
 ║2║ ✰ Add
 ║3║ ✰ Gift
@@ -86,7 +86,7 @@ helpMessage="""(╣••℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́�
 ║45║ ✰ Ban "@"
 ║46║ ✰ Unban "@"
 ║47║ ✰ Sc @
-║48║ ✰ Nuke
+║48║ ✰ Reboot
 ║49║ ✰ Backup
 ║50║ ✰ Tagall
 ║51║ ✰ Kick@mbl 
@@ -100,11 +100,9 @@ helpMessage="""(╣••℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́�
 ║59║ ✰ Wc️
 ║60║ ✰ Sp
 ║61║ ✰ stafflist
-║62║ ✰ Reboot
+║62║ ✰ Pmfavorite
 ║63║ ✰ Leaveallgroup
-║64║ ✰ Pmfavorite
-║65║ ✰ Broken
-║╩═══NEXT PAGE═══╦
+✰✰✰✰
 ║║ ✰ Allprotect:on/off
 ║║ ✰ Admin:add @
 ║║ ✰ Admin:del @
@@ -118,8 +116,8 @@ helpMessage="""(╣••℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́�
 ║🔛║ ✰ {Setauto}
 ╚══╩════════╝
   """
-helpMessage1="""(╣••℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́••╣)
-╔═B༘̈́̈́L༘̈́̈́Ä༘́̈́C༘̈́̈́K༘̈́̈́   ̈́Ö༘́̈́F༘̈́̈́ ̈́  G༘̈́̈́Ä༘́̈́M༘̈́̈́Ë༘́̈́R༘̈́̈́═╗
+helpMessage1="""(╣••̰̈́B̰̰̈́Ö̰́S̰̰̈́S̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́••╣)
+╔═T༘̈́̈́Ä༘́̈́C༘̈́̈́Ö༘́̈́  ̈́  L༘̈́̈́Ö༘́̈́V༘̈́̈́Ë༘́̈́R༘̈́̈́═╗
 ║╩═ADMIN+OWNER═╦
 ║1║ ✰ Me
 ║2║ ✰ Smule 
@@ -170,8 +168,8 @@ helpMessage1="""(╣••℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́
 ║║ ✰ Virus
 ╚══╩═══════╝
   """
-helpMedia="""(╣••℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́••╣)
-╔═B༘̈́̈́L༘̈́̈́Ä༘́̈́C༘̈́̈́K༘̈́̈́   ̈́Ö༘́̈́F༘̈́̈́ ̈́  G༘̈́̈́Ä༘́̈́M༘̈́̈́Ë༘́̈́R༘̈́̈́═╗
+helpMedia="""(╣••̰̰̈́B̰̰̈́Ö̰̰́S̰̰̈́S̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́••╣)
+╔═T༘̈́̈́Ä༘́̈́C༘̈́̈́Ö༘́̈́  ̈́  L༘̈́̈́Ö༘́̈́V༘̈́̈́Ë༘́̈́R༘̈́̈́═╗
 ║╦═══MEDIA═══
 ║1║ ✰ Youtube *text*
 ║2║ ✰ Youtubesearch *user*
@@ -248,8 +246,8 @@ helpMedia="""(╣••℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́❍
 ║🔛║ ✰ {Setauto}
 ╚══╩══════╝
 """
-helpFun = """(╣℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́╣)
-╔═B༘̈́̈́L༘̈́̈́Ä༘́̈́C༘̈́̈́K༘̈́̈́   ̈́Ö༘́̈́F༘̈́̈́ ̈́  G༘̈́̈́Ä༘́̈́M༘̈́̈́Ë༘́̈́R༘̈́̈́═╗
+helpFun = """(╣̰̈́B̰̰̈́Ö̰̰́S̰̰̈́S̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́╣)
+╔═T༘̈́̈́Ä༘́̈́C༘̈́̈́Ö༘́̈́  ̈́  L༘̈́̈́Ö༘́̈́V༘̈́̈́Ë༘́̈́R༘̈́̈́═╗
 ║╦═══MEDIA═══
 ║1║ ✰ sider:*txt*
 ║2║ ✰ tagme:*txt
@@ -296,7 +294,7 @@ helpself="""
 ║23║ ✰ Allbio "status"
 ║24║ ✰ Sendcontact "text"
 ║25║ ✰ Botbyeall  
-║••℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́••
+║••̰B̰̰̈́Ö̰̰́S̰̈́S̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́••
 ╚═══════════╝
   """
 helpset="""╔(╣ S༘̏̏Ȅ༘̏T༘̏̏T༘̏̏Ȉ༘̏N༘̏̏G༘̏̏ ̏B༘̏̏Ȍ༘̏T༘̏̏S༘̏̏.╣)╗
@@ -335,12 +333,12 @@ helpset="""╔(╣ S༘̏̏Ȅ༘̏T༘̏̏T༘̏̏Ȉ༘̏N༘̏̏G༘̏̏ ̏B
 ║🔧║ ✰ {Settings}
 ║🔛║ ✰ {Setauto}
 ╚══╩══════╝
-║ ╦═B༘̈́̈́L༘̈́̈́Ä༘́̈́C༘̈́̈́K༘̈́̈́   ̈́Ö༘́̈́F༘̈́̈́ ̈́  G༘̈́̈́Ä༘́̈́M༘̈́̈́Ë༘́̈́R༘̈́̈́═╦
-╚═•℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́•╝
+║ ╦═T༘̈́̈́Ä༘́̈́C༘̈́̈́Ö༘́̈́   ̈́  L༘̈́̈́Ö༘́̈́V༘̈́̈́Ë༘́̈́R༘̈́̈́═╦
+╚═•̰̰̈́B̰̰̈́Ö̰̰́S̰̰̈́S̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́•╝
 """
 translateMessage ="""
 ╔══════════
-║(╣℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́╣)
+║(╣̰̰̈́B̰̰̈́Ö̰̰́S̰̰̈́S̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́╣)
 ║╔═════════
 ║══════════
 ║✰║ Afrika/
@@ -410,27 +408,27 @@ ki3mid = ki3.getProfile().mid
 ki4mid = ki4.getProfile().mid
 ki5mid = ki5.getProfile().mid
 Bots=[mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid]
-admsa = "ucd84031744997951cdee018db951aea3" #MID SELFBOT
-PRANKBOT = ["ufce863f62f40706c01fa4a3c3c4cb096"] #MID OWNER
+admsa = "ua8a21f0c9d657e9ae977cd770f0a9f84" #MID SELFBOT
+PRANKBOT = ["ua8a21f0c9d657e9ae977cd770f0a9f84"] #MID OWNER
 wait = {
     'contact':False,
     'autoJoin':True,
     'autoCancel':{"on":True,"members":1},
-    'leaveRoom':True,
-    'timeline':False,
+    'leaveRoom':False,
+    'timeline':True,
     'autoAdd':True,
-    'tagme':"message tag belum di set",
-    'sider1':"message sider belum di set",
-    'joingc':"message member join belum di set",
-    'leftgc':"message member left belum di set",
+    'tagme':"message not set",
+    'sider1':"message sider not set",
+    'joingc':"message member join not set",
+    'leftgc':"message member left not set",
     "stickerMention":False,
-    'message':"""THANKS FOR ADD ME\n\nSUBCRABE ME ON YOUTUBE\n\nhttps://www.youtube.com/channel/UCycBrqSWEHdk-slnhUmGWiQ""",
+    'message':"""I JUST FUCKING LOVE TACOS""",
     "lang":"JP",
-    "comment":"Thanks For Add Me",
-    "comment1":"|======AUTO LIKE======|\n\nSUBCRABE ME ON YOUTUBE\n\nhttps://www.youtube.com/channel/UCycBrqSWEHdk-slnhUmGWiQ\n\nMENERIMA PESANAN SELFBOT MINAT.!!\nINFO LANGSUNG KE\n\nID:::::http://line.me/ti/p/~adiputra.95",
+    "comment":"Thanks For Adding Me",
+    "comment1":"I'm new to LINE, invite me to rooms!",
     "commentOn":False,
     "likeOn":True,
-    "wcOn":True,
+    "wcOn":False,
     "leftOn":True,
     "alwayRead":False,
     "Removechat":False,
@@ -449,10 +447,10 @@ wait = {
     "ACIL":{},
     "wblacklist":False,
     "dblacklist":False,
-    "protect":False,
-    "cancelprotect":False,
-    "inviteprotect":False,
-    "linkprotect":False,
+    "protect":True,
+    "cancelprotect":True,
+    "inviteprotect":True,
+    "linkprotect":True,
     "atjointicket":True,
     "potoMention":{},
     "prankName":True,
@@ -941,7 +939,7 @@ def bot(op):
                      targets = []
                      for s in groups.members:
                          if _name in s.displayName:
-                             acil.sendText(msg.to, _name + " Berada DiGrup Ini")
+                             acil.sendText(msg.to, _name + " Invited")
                          else:
                              targets.append(invite)
                      if targets == []:
@@ -1028,7 +1026,7 @@ def bot(op):
                     t = acil.getAllContactIds()
                     for manusia in t:
                         acil.sendText(manusia, (bctxt))
-            if "Virus" in msg.text:
+            if "Super Nova" in msg.text:
               if msg.from_ in PRANKBOT:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': "BEBAS,'"}
@@ -1042,7 +1040,7 @@ def bot(op):
                 path = str(cu)
                 image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
                 try:
-                    acil.sendText(msg.to,"Nama :\n" + contact.displayName + "\n\nBio :\n" + contact.statusMessage)
+                    acil.sendText(msg.to,"Name :\n" + contact.displayName + "\n\nBio :\n" + contact.statusMessage)
                     acil.sendText(msg.to,"Profile Picture " + contact.displayName)
                     acil.sendImageWithURL(msg.to,image)
                     acil.sendText(msg.to,"Cover " + contact.displayName)
@@ -1082,7 +1080,7 @@ def bot(op):
               if msg.from_ in PRANKBOT:
                   try:
                       wiki = msg.text.replace("Wikipedia ","")
-                      wikipedia.set_lang("id")
+                      wikipedia.set_lang("en")
                       pesan="Title ("
                       pesan+=wikipedia.page(wiki).title
                       pesan+=")\n\n"
@@ -1109,7 +1107,7 @@ def bot(op):
                     a = msg.text.replace("Smule ","")
                     b = urllib.quote(a)
                     acil.sendText(msg.to,"Searching to id smule..")
-                    acil.sendText(msg.to, "Nama: "+b+"\nId smule: http://smule.com/" +b)
+                    acil.sendText(msg.to, "Name: "+b+"\nId smule: http://smule.com/" +b)
             if "Google " in msg.text:
               if msg.from_ in PRANKBOT:
                     a = msg.text.replace("Google ","")
@@ -1173,57 +1171,57 @@ def bot(op):
                 if wait["lang"] == "JP":
                 	acil.sendText(msg.to,helpMessage1)
                 	msg.contentType = 13
-                	acil.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
-                	msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                	acil.sendText(msg.to,"Add the creator of BOSS BOTS")
+                	msg.contentMetadata = {'mid':'ua8a21f0c9d657e9ae977cd770f0a9f84'}
                 	acil.sendMessage(msg)
                 else:
                 	acil.sendText(msg.to,helpMessage1)
                 	msg.contentType = 13
-                	acil.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
-                	msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                	acil.sendText(msg.to,"Creator of BOSS BOTS")
+                	msg.contentMetadata = {'mid':'ua8a21f0c9d657e9ae977cd770f0a9f84'}
                 	acil.sendMessage(msg)
             if "Media" == msg.text:
               if msg.from_ in PRANKBOT:
                 if wait["lang"] == "JP":
                     acil.sendText(msg.to,helpMedia)
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                    msg.contentMetadata = {'mid':'ua8a21f0c9d657e9ae977cd770f0a9f84'}
                     acil.sendMessage(msg)
-                    acil.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                    acil.sendText(msg.to,"Add the creator of BOSS BOTS")
                 else:
                     acil.sendText(msg.to,helpMedia)
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                    msg.contentMetadata = {'mid':'ua8a21f0c9d657e9ae977cd770f0a9f84'}
                     acil.sendMessage(msg)
-                    acil.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                    acil.sendText(msg.to,"Add the creator of BOSS BOTS")
             if "Helpbots" == msg.text:
               if msg.from_ in PRANKBOT:
                 if wait["lang"] == "JP":
                     ki.sendText(msg.to,helpself)
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                    msg.contentMetadata = {'mid':'ua8a21f0c9d657e9ae977cd770f0a9f84'}
                     acil.sendMessage(msg)
-                    acil.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                    acil.sendText(msg.to,"Add the creator of BOSS BOTS")
                 else:
                     acil.sendText(msg.to,helpself)
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                    msg.contentMetadata = {'mid':'ua8a21f0c9d657e9ae977cd770f0a9f84'}
                     acil.sendMessage(msg)
-                    acil.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                    acil.sendText(msg.to,"Add the creator of BOSS BOTS")
             if "Settings" == msg.text:
               if msg.from_ in PRANKBOT:
                 if wait["lang"] == "JP":
                     acil.sendText(msg.to,helpset)
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                    msg.contentMetadata = {'mid':'ua8a21f0c9d657e9ae977cd770f0a9f84'}
                     acil.sendMessage(msg)
-                    acil.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                    acil.sendText(msg.to,"Add the creator of BOSS BOTS")
                 else:
                     acil.sendText(msg.to,helpset)
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                    msg.contentMetadata = {'mid':'ua8a21f0c9d657e9ae977cd770f0a9f84'}
                     acil.sendMessage(msg)
-                    acil.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                    acil.sendText(msg.to,"Add the creator of BOSS BOTS")
             if "Me" == msg.text:
               if msg.from_ in PRANKBOT:
                        msg.contentType = 13
@@ -1248,10 +1246,10 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': ki5mid}
                 ki5.sendMessage(msg)
-                ki.sendText(msg.to,"AMAN TERKENDALI KOMANDAN 👮")
+                ki.sendText(msg.to,"ALL SOLDIERS ACCOUNTED FOR KOMANDAN 👮")
             if "Set" == msg.text:
               if msg.from_ in PRANKBOT:
-                md = "╔▬▬℘ґ∂ηк в❍тs▬▬╗\n║▬▬▬℘▬▬в▬▬▬║\n"
+                md = "╔▬▬BOSS в❍тs▬▬╗\n║▬▬▬℘▬▬в▬▬▬║\n"
                 if wait["likeOn"] == True: md+="║☆║Like:ON➡️📱\n"
                 else: md+="║☆║Like:OFF➡️📴\n"
                 if wait["wcOn"] == True: md+="║☆║Welcome:ON➡️📱\n"
@@ -1303,19 +1301,19 @@ def bot(op):
                     pass
                     cctv['cyduk'][msg.to]=True
                     wait["Sider"] = True
-                    acil.sendText(msg.to,"Siap On Cek Sider")
+                    acil.sendText(msg.to," On Check Sider")
             if "Sider:off" in msg.text:
 	          if msg.from_ in PRANKBOT:
                     cctv['cyduk'][msg.to]=False
                     wait["Sider"] = False
-                    acil.sendText(msg.to, "Cek Sider Off")
+                    acil.sendText(msg.to, "Check Sider Off")
             if msg.text in ["Allprotect:on"]:
               if msg.from_ in PRANKBOT:
                 if wait["protect"] == True:
                     if wait["lang"] == "JP":
                         acil.sendText(msg.to,"Protection Enable 􀜁􀇔􏿿✔")
                     else:
-                        acil.sendText(msg.to,"Hal ini sudah terbuka ✔")
+                        acil.sendText(msg.to,"Enabled ✔")
                 else:
                     wait["protect"] = True
                     if wait["lang"] == "JP":
@@ -1326,7 +1324,7 @@ def bot(op):
                     if wait["lang"] == "JP":
                         acil.sendText(msg.to,"Link Protection Enable 􀜁􀇔􏿿✔")
                     else:
-                        acil.sendText(msg.to,"Hal ini sudah terbuka ✔")
+                        acil.sendText(msg.to,"Enabled ✔")
                 else:
                     wait["linkprotect"] = True
                     if wait["lang"] == "JP":
@@ -1337,7 +1335,7 @@ def bot(op):
                     if wait["lang"] == "JP":
                         acil.sendText(msg.to,"Invite Protect Enable 􀜁􀇔􏿿✔")
                     else:
-                        acil.sendText(msg.to,"Hal ini sudah terbuka ✔")
+                        acil.sendText(msg.to,"Enabled ✔")
                 else:
                     wait["inviteprotect"] = True
                     if wait["lang"] == "JP":
@@ -1354,7 +1352,7 @@ def bot(op):
                     if wait["lang"] == "JP":
                         acil.sendText(msg.to,"Cancel Protection Enable 􀜁􀇔􏿿✔")
                     else:
-                        acil.sendText(msg.to,"Hal ini sudah terbuka ✔")
+                        acil.sendText(msg.to,"Enabled ✔")
                 else:
                     wait["cancelprotect"] = True
                     if wait["lang"] == "JP":
@@ -1368,7 +1366,7 @@ def bot(op):
                     if wait["lang"] == "JP":
                         acil.sendText(msg.to,"Protection Disable ✔")
                     else:
-                        acil.sendText(msg.to,"sudah dimatikan ✔")
+                        acil.sendText(msg.to,"Disabled ✔")
                 else:
                     wait["protect"] = False
                     if wait["lang"] == "JP":
@@ -1379,7 +1377,7 @@ def bot(op):
                     if wait["lang"] == "JP":
                         acil.sendText(msg.to,"Link Protection Disable ✖")
                     else:
-                        acil.sendText(msg.to,"sudah dimatikan ✖")
+                        acil.sendText(msg.to,"Disabled ✖")
                 else:
                     wait["linkprotect"] = False
                     if wait["lang"] == "JP":
@@ -1390,7 +1388,7 @@ def bot(op):
                     if wait["lang"] == "JP":
                         acil.sendText(msg.to,"Invite Protection Disable ✖")
                     else:
-                        acil.sendText(msg.to,"sudah dimatikan ✖")
+                        acil.sendText(msg.to,"Disabled ✖")
                 else:
                     wait["inviteprotect"] = False
                     if wait["lang"] == "JP":
@@ -1406,7 +1404,7 @@ def bot(op):
                     if wait["lang"] == "JP":
                         acil.sendText(msg.to,"Cancel Protection Disable ✖")
                     else:
-                        acil.sendText(msg.to,"sudah dimatikan ✖")
+                        acil.sendText(msg.to,"Disabled ✖")
                 else:
                     wait["cancelprotect"] = False
                     if wait["lang"] == "JP":
@@ -1428,13 +1426,13 @@ def bot(op):
                       f=codecs.open('st2__a.json','w','utf-8')
                       json.dump(wait["ACIL"], f, sort_keys=True, indent=4,ensure_ascii=False)
                       acil.sendText(msg.to,"OWNER MENAMBAHKAN ADMIN")
-                      print "[Admin]DITAMBAHKAN"
+                      print "[Admin]ADDED"
                    except:
                       pass
             if "Admin:del @" in msg.text:
               if msg.from_ in PRANKBOT:
                 if msg.toType == 2:
-                    print "[Admin]DIHAPUS"
+                    print "[Admin]DELETED"
                     _name = msg.text.replace("Admin:del @","")
                     _nametarget = _name.rstrip()
                     gs = acil.getGroup(msg.to)
@@ -1545,8 +1543,8 @@ def bot(op):
             if "Wc" in msg.text:
               if msg.from_ in PRANKBOT:
                 ginfo = acil.getGroup(msg.to)
-                acil.sendText(msg.to,"Selamat Datang Di Grup " + str(ginfo.name))
-                acil.sendText(msg.to,"Owner Grup " + str(ginfo.name) + " :\n" + ginfo.creator.displayName )
+                acil.sendText(msg.to,"WELCOME TO THE GROUP! " + str(ginfo.name))
+                acil.sendText(msg.to,"Owner of the Group " + str(ginfo.name) + " :\n" + ginfo.creator.displayName )
             if "Say " in msg.text:
               if msg.from_ in PRANKBOT:
 				bctxt = msg.text.replace("Say ","")
@@ -1562,15 +1560,15 @@ def bot(op):
                 if wait["lang"] == "JP":
                 	acil.sendText(msg.to,helpMessage1)
                 	msg.contentType = 13
-                	msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
-                	acil.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                	msg.contentMetadata = {'mid':'ua8a21f0c9d657e9ae977cd770f0a9f84'}
+                	acil.sendText(msg.to,"Add the creator of BOSS BOTS")
                 	acil.sendMessage(msg)
                 else:
                     acil.sendText(msg.to,helpMessage1)
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                    msg.contentMetadata = {'mid':'ua8a21f0c9d657e9ae977cd770f0a9f84'}
                     acil.sendMessage(msg)
-                    acil.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                    acil.sendText(msg.to,"ADD THE CREATOR OF BOSS BOTS")
             if "Me" == msg.text:
               if msg.from_ in wait["ACIL"]:
                        msg.contentType = 13
@@ -1595,7 +1593,7 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': ki5mid}
                 ki5.sendMessage(msg)
-                ki.sendText(msg.to,"AMAN TERKENDALI KOMANDAN 👮")
+                ki.sendText(msg.to,"ALL TROOPS ACCOUNTED FOR KOMANDAN 👮")
             if "Getvid @" in msg.text:
               if msg.from_ in wait["ACIL"]:
                 print "[Command]dp executing"
@@ -1680,8 +1678,8 @@ def bot(op):
             if "Wc" in msg.text:
               if msg.from_ in wait["ACIL"]:
                 ginfo = acil.getGroup(msg.to)
-                acil.sendText(msg.to,"Selamat Datang Di Grup " + str(ginfo.name))
-                acil.sendText(msg.to,"Owner Grup " + str(ginfo.name) + " :\n" + ginfo.creator.displayName )
+                acil.sendText(msg.to,"WELCOME TO THE GROUP " + str(ginfo.name))
+                acil.sendText(msg.to,"Owner OF THE Group " + str(ginfo.name) + " :\n" + ginfo.creator.displayName )
             if "Say " in msg.text:
               if msg.from_ in wait["ACIL"]:
 				bctxt = msg.text.replace("Say ","")
@@ -1732,12 +1730,12 @@ def bot(op):
                     cctv['sidermem'][msg.to] = ""
                     cctv['cyduk'][msg.to]=True
                     wait["Sider"] = True
-                    acil.sendText(msg.to,"Siap On Cek Sider")
+                    acil.sendText(msg.to," On Check Sider")
             if "Sider:off" in msg.text:
 	          if msg.from_ in wait["ACIL"]:
                     cctv['cyduk'][msg.to]=False
                     wait["Sider"] = False
-                    acil.sendText(msg.to, "Cek Sider Off")
+                    acil.sendText(msg.to, "Check Sider Off")
             if "Github " in msg.text:
               if msg.from_ in wait["ACIL"]:
                     a = msg.text.replace("Github ","")
@@ -1753,7 +1751,7 @@ def bot(op):
               if msg.from_ in wait["ACIL"]:
                   try:
                       wiki = msg.text.replace("Wikipedia ","")
-                      wikipedia.set_lang("id")
+                      wikipedia.set_lang("en")
                       pesan="Title ("
                       pesan+=wikipedia.page(wiki).title
                       pesan+=")\n\n"
@@ -1958,7 +1956,7 @@ def bot(op):
                     t = acil.getAllContactIds()
                     for manusia in t:
                         acil.sendText(manusia, (bctxt))
-            elif "Virus" in msg.text:
+            elif "Super Nova" in msg.text:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': "BEBAS,'"}
                 acil.sendMessage(msg)
@@ -1966,7 +1964,7 @@ def bot(op):
               if Bots == []:
                   acil.sendText(msg.to,"The Friends is empty")
               else:
-                  acil.sendText(msg.to,"Tunggu...")
+                  acil.sendText(msg.to,"...")
                   mc = "||===FRIENDLIST===||\n=====================\n"
                   for mi_d in Bots:
                       mc += "★" +acil.getContact(mi_d).displayName + "\n"
@@ -1980,7 +1978,7 @@ def bot(op):
                 path = str(cu)
                 image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
                 try:
-                    acil.sendText(msg.to,"Nama :\n" + contact.displayName + "\n\nBio :\n" + contact.statusMessage)
+                    acil.sendText(msg.to,"Name :\n" + contact.displayName + "\n\nBio :\n" + contact.statusMessage)
                     acil.sendText(msg.to,"Profile Picture " + contact.displayName)
                     acil.sendImageWithURL(msg.to,image)
                     acil.sendText(msg.to,"Cover " + contact.displayName)
@@ -2017,7 +2015,7 @@ def bot(op):
             elif "Wikipedia " in msg.text:
                   try:
                       wiki = msg.text.lower().replace("Wikipedia ","")
-                      wikipedia.set_lang("id")
+                      wikipedia.set_lang("en")
                       pesan="Title ("
                       pesan+=wikipedia.page(wiki).title
                       pesan+=")\n\n"
@@ -2042,7 +2040,7 @@ def bot(op):
                     a = msg.text.replace("Smule ","")
                     b = urllib.quote(a)
                     acil.sendText(msg.to,"Searching to id smule..")
-                    acil.sendText(msg.to, "Nama: "+b+"\nId smule: http://smule.com/" +b)
+                    acil.sendText(msg.to, "Name: "+b+"\nId smule: http://smule.com/" +b)
             elif "Google " in msg.text:
                     a = msg.text.replace("Google ","")
                     b = urllib.quote(a)
@@ -2188,7 +2186,7 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': ki5mid}
                 ki5.sendMessage(msg)
-                ki.sendText(msg.to,"AMAN TERKENDALI KOMANDAN 👮")
+                ki.sendText(msg.to,"ALL TROOPS ACCOUNTED FOR KOMANDAN 👮")
             elif "B1" == msg.text:
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': kimid}
@@ -2211,8 +2209,8 @@ def bot(op):
                 ki5.sendMessage(msg)
             elif "Creator" == msg.text:
                 msg.contentType = 13
-                msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
-                acil.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                msg.contentMetadata = {'mid':'ua8a21f0c9d657e9ae977cd770f0a9f84'}
+                acil.sendText(msg.to,"ADD THE CREATOR OF BOSS BOTS")
                 acil.sendMessage(msg)
             elif msg.text in ["Allgift","B1 gift"]:
                 msg.contentType = 9
@@ -2546,7 +2544,7 @@ def bot(op):
             elif msg.text.lower() == 'contact:on':
                 if wait["contact"] == True:
                     if wait["lang"] == "JP":
-                        acil.sendText(msg.to,"Sudah On")
+                        acil.sendText(msg.to,"CONTACT On")
                     else:
                         acil.sendText(msg.to,"It is already open")
                 else:
@@ -2558,7 +2556,7 @@ def bot(op):
             elif msg.text.lower() == 'contact:off':
                 if wait["contact"] == False:
                     if wait["lang"] == "JP":
-                        acil.sendText(msg.to,"sudah off ✖")
+                        acil.sendText(msg.to,"CONTACT off ✖")
                     else:
                         acil.sendText(msg.to,"It is already off ✖")
                 else:
@@ -2811,7 +2809,7 @@ def bot(op):
                 else:md+="║☆║Procancel:OFF➡️📴\n"
                 if wait["pname"] == True: md+="║☆║Namelock:ON➡️📱\n"
                 else: md+="║☆║Namelock:OFF➡️📴\n"   
-                acil.sendText(msg.to,md + "║▬▬▬℘▬▬в▬▬▬║\n╚▬▬℘ґ∂ηк в❍тs▬▬╝")
+                acil.sendText(msg.to,md + "║▬▬▬℘▬▬в▬▬▬║\n╚▬▬BOSS в❍тs▬▬╝")
             elif "Creatorgrup" == msg.text:
                 try:
                     group = acil.getGroup(msg.to)
@@ -3486,7 +3484,7 @@ def bot(op):
                     acil.sendImageWithURL(msg.to,path)
                 except:
                     pass
-            elif msg.text in ["Kalender","Time","Waktu"]:
+            elif msg.text in ["Calender","Time","Waktu"]:
                        tz = pytz.timezone("Asia/Jakarta")
                        timeNow = datetime.now(tz=tz)
                        day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
@@ -3704,38 +3702,38 @@ def bot(op):
                        ki2.sendText(g.mid,"TUH")
                        ki3.sendText(g.mid,"BAU")
                        ki4.sendText(g.mid,"TAI")
-                       ki5.sendText(g.mid,"~WE ARE PRANKBOT BLACK OF GAMER~")
+                       ki5.sendText(g.mid,"~WE ARE BOSS BOTS~")
                        ki.sendText(g.mid,"LO")
                        ki2.sendText(g.mid,"TUH")
                        ki3.sendText(g.mid,"BAU")
                        ki4.sendText(g.mid,"TAI")
-                       ki5.sendText(g.mid,"~WE ARE PRANKBOT BLACK OF GAMER~")
+                       ki5.sendText(g.mid,"~WE ARE BOSS BOTS~")
                        ki.sendText(g.mid,"LO")
                        ki2.sendText(g.mid,"TUH")
                        ki3.sendText(g.mid,"BAU")
                        ki4.sendText(g.mid,"TAI")
-                       ki5.sendText(g.mid,"~WE ARE PRANKBOT BLACK OF GAMER~")
+                       ki5.sendText(g.mid,"~WE ARE BOSS BOTS~")
                        ki.sendText(g.mid,"LO")
                        ki2.sendText(g.mid,"TUH")
                        ki3.sendText(g.mid,"BAU")
                        ki4.sendText(g.mid,"TAI")
-                       ki5.sendText(g.mid,"~WE ARE PRANKBOT BLACK OF GAMER~")
+                       ki5.sendText(g.mid,"~WE ARE BOSS BOTS~")
 		       ki6.sendText(g.mid,"Your Account Has Been Spammed !")
                        ki.sendText(g.mid,"LO")
                        ki2.sendText(g.mid,"TUH")
                        ki3.sendText(g.mid,"BAU")
                        ki4.sendText(g.mid,"TAI")
-                       ki5.sendText(g.mid,"~WE ARE PRANKBOT BLACK OF GAMER~")
+                       ki5.sendText(g.mid,"~WE ARE BOSS BOTS~")
                        ki.sendText(g.mid,"LO")
                        ki2.sendText(g.mid,"TUH")
                        ki3.sendText(g.mid,"BAU")
                        ki4.sendText(g.mid,"TAI")
-                       ki5.sendText(g.mid,"~WE ARE PRANKBOT BLACK OF GAMER~")
+                       ki5.sendText(g.mid,"~WE ARE BOSS BOTS~")
                        ki.sendText(g.mid,"LO")
                        ki2.sendText(g.mid,"TUH")
                        ki3.sendText(g.mid,"BAU")
                        ki4.sendText(g.mid,"TAI")
-                       ki5.sendText(g.mid,"~WE ARE PRANKBOT BLACK OF GAMER~")
+                       ki5.sendText(g.mid,"~WE ARE BOSS BOTS~")
                        acil.sendText(msg.to, "Succes...!!!!")
                        print " Spammed !"
 #--------------------------------------------------------------------------
@@ -4769,7 +4767,7 @@ def bot(op):
             if wait["autoAdd"] == True:
             	c = Message(to=op.param1, from_=None, text=None, contentType=13)
                 c.contentMetadata={'mid':'u5818cb4404411c2e2e6e6937d172cca8'}
-                acil.sendImageWithURL(op.param1,"|======AUTO ADD======|\n\nSUBCRABE MY CHANNEL YOUTUBE\n\nhttps://www.youtube.com/channel/UCycBrqSWEHdk-slnhUmGWiQ\n\nMENERIMA PESANAN SELFBOT MINAT.!!\nINFO LANGSUNG KE\n\nID:::::http://line.me/ti/p/~adiputra.95")
+                acil.sendImageWithURL(op.param1,"I FUCKING LOVE TACOS")
                 if (wait["message"] in [""," ","\n",None]):
                     pass
                 else:
@@ -4916,4 +4914,6 @@ while True:
         if (Op.type != OpType.END_OF_OPERATION):
             acil.Poll.rev = max(acil.Poll.rev, Op.revision)
             bot(Op)
+
+
 
